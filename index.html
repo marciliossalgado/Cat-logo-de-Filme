@@ -9,14 +9,16 @@
 <body>
   <header>
     <h1>Catálogo de Filmes</h1>
-    <input type="text" id="search-input" placeholder="Buscar filmes...">
+    <input type="text" id="search-input" placeholder="Buscar filmes..." aria-label="Buscar filmes">
   </header>
 
   <div id="movie-list" class="movie-list"></div>
-  <div id="movie-details"></div>
+  <div id="movie-details" class="movie-details"></div>
 
-  <button onclick="previousPage()">Anterior</button>
-  <button onclick="nextPage()">Próximo</button>
+  <div class="pagination">
+    <button id="previous-btn" onclick="previousPage()" disabled>Anterior</button>
+    <button id="next-btn" onclick="nextPage()">Próximo</button>
+  </div>
 
   <script src="./index.js"></script>
 </body>
